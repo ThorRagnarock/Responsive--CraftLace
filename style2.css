@@ -1,0 +1,517 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+    /*** FOR THE SAKE OF POS: STICKY MAX-HEIGHT ***/
+    /* min-height: 100vh; */
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.border_wDropShadow {
+    background-color: white;
+    box-shadow: 1px 1px 4px 0 rgb(64 64 64 / 26%);
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    margin: 0 auto 30px;
+    max-width: 970px;
+    line-height: 1.25;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.lightgreen {
+    color: rgb(90, 180, 66)
+}
+
+.section {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.wrapper,
+.container {
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 0 15px; */
+}
+
+@media screen and (min-width:1280px) {
+
+    .wrapper,
+    .container {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+.heading-top {
+    display: flex;
+    background-color: rgb(6, 0, 119);
+    height: 40px;
+    font-size: 12px;
+    color: white;
+}
+
+.heading-top .fa {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.heading-top a {
+    color: white;
+}
+
+.navigation {
+    box-shadow: 0 2px 6px 0;
+    height: 60px;
+    background-color: white;
+
+    position: sticky;
+    top: 0;
+    bottom: 100vh;
+}
+
+.navigation .navbar a {
+    color: black;
+    border: 1px solid transparent;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+.navigation .navbar a:hover {
+    color: green;
+    border: 1px solid green;
+}
+
+.main .container {
+    width: auto;
+    height: 870px;
+    background-color: #4ca368;
+    box-shadow: inset 0 4px 15px -2px rgb(0 0 0 / 50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main p {
+    max-width: 760px;
+    margin: -20px 0 95px;
+    line-height: 1.625;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+@media screen and (max-width:767px) {
+    .navigation .container {
+        flex-direction: column;        
+    }
+    .navigation {
+        height: 100px;
+    }
+    .navbar {
+    margin-top: 15px;
+    }
+}
+
+/*** cut to sign-up community box ***/
+.sign-up {
+    /* background-color: #f9f9f9; */
+    padding-top: 100px;
+    background-image: url("pattern-1.gif");
+    background-repeat: repeat;
+    background-color: white;
+}
+
+.signup-guide {
+    width: 630px;
+}
+
+.signup-title {
+    margin-bottom: 35px;
+}
+
+.sign-up .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signup-process-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 70px;
+}
+
+.signup-guide-decor {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 30px;
+    text-align: center;
+    color: #ccc;
+}
+
+.signup-guide-decor i {
+    margin-bottom: -25px;
+    font-size: 60px;
+}
+
+.signup-icon {
+    /* should I use this form for all the big green icons? */
+    color: rgb(90, 180, 66);
+    padding-bottom: 20px;
+    margin: 125px 30px auto 0;
+    font-size: 80px;
+}
+
+.signup-process {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.signup-process-title {
+    margin: 0;
+    color: rgb(93, 180, 66);
+    line-height: 1.75;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.signup-process-description {
+    color: rgb(51, 51, 51);
+    line-height: 1.75;
+    padding: 0 20px 0;
+    margin: 0;
+    font-weight: 300;
+}
+
+
+/*** SIGNUP ACTION BUTTONS ***/
+.signup-action-buttons {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .signup-action-buttons {
+        width: 365px;
+        flex-direction: column;
+    }
+
+    .signup-button-box {
+        margin-bottom: 10px;
+    }
+}
+
+.signup-button-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(51, 51, 51);
+}
+
+.signup-action-circle {
+    border: 2px solid rgb(90, 180, 66);
+    border-radius: 50%;
+    background-color: white;
+    color: rgb(90, 180, 66);
+    padding: 15px;
+    font-size: 16px;
+}
+
+.signup-action-circle:hover {
+    color: white;
+    background-color: rgb(93, 180, 66);
+}
+
+/**** PACKAGES  *****/
+.packages .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 45px;
+}
+
+.packages .title {
+    margin-top: 100px;
+}
+
+/* the title bofore the package-variants (boxes) */
+.packages-editions-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.packages-editions-selector {
+    display: flex;
+    margin: 0 auto 20px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.squr-btn {
+    display: flex;
+    width: 140px;
+    height: 33px;
+    border: 1px solid #cecece;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bsns-edition {
+    border-radius: 40px 0 0 40px;
+}
+
+.cmnt-edition {
+    border-radius: 0 40px 40px 0;
+}
+
+.squr-btn:hover {
+    border: 1px sold #cecece;
+    background-color: rgb(93, 180, 66);
+    color: white;
+}
+
+.package-variant {
+    width: 100%;
+    border: 1px solid #ececec;
+    margin: 15px;
+    padding: 30px 0 40px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width:1200px) {
+    .package-variant {
+        width: calc(25% - 30px);
+    }
+}
+
+.package-variant h4 {
+    margin: 0 auto 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.package-price-box {
+    border: 1px solid rgb(93, 180, 66);
+    border-radius: 50%;
+    outline: 3px solid #cecece;
+
+    font-size: 23px;
+    line-height: 1.1;
+    font-weight: 400;
+    padding: 23px 20px 19px 20px;
+    width: 90px;
+}
+
+.package-price-box p {
+    font-size: 10px;
+    font-style: italic;
+    line-height: 0;
+}
+
+.package-description {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #777;
+}
+
+.red {
+    color: red
+}
+
+.green {
+    color: rgb(93, 180, 66)
+}
+
+.package-button button {
+    border: 1px solid #ececec;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+.package-button button:hover {
+    color: white;
+    background-color: rgb(93, 180, 66);
+}
+
+.data {
+    padding-top: 100px;
+    background-image: url("pattern-1.gif");
+    background-repeat: repeat;
+    background-color: white;
+}
+
+.data .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.data-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgb(64 64 64 / 26%);
+    height: 320px;
+    padding: 15px 30px;
+    margin-bottom: 30px;
+
+    font-size: 12px;
+    line-height: 1.833;
+    color: rgb(119, 119, 119);
+}
+
+.data-box i {
+    margin-top: 20px;
+    color: rgb(93, 180, 66);
+    font-size: 80px;
+
+    /*DEFINING THE "UNDERSCORE" LINE BELOW THE ICON*/
+    width: 80px;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 19px;
+}
+
+.data-title {
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.data-description {
+    font-size: 12px;
+    line-height: 1.833;
+    margin-bottom: 20px;
+}
+
+.data-box:hover {
+    background-color: rgb(93, 180, 66);
+}
+
+.data-box:hover i {
+    border-bottom: 2px solid white;
+}
+
+.data-box:hover i,
+.data-box:hover .data-title,
+.data-box:hover .data-description {
+    color: white;
+}
+
+
+@media screen and (min-width: 768px) {
+    .data-box {
+        width: calc(50% - 15px)
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .data-box {
+        width: calc(25% - 30px);
+    }
+}
+
+footer {
+    background-color: #efefef;
+}
+
+footer p {
+    margin: 0;
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+.footloose {
+    display: flex;
+    bottom: 0;
+    font-size: 12px;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.footloose img {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 950px) {
+    footer p {
+        padding-top: 11px;
+        border-top: 1px solid;
+    }
+
+    .footloose {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: flex-start;
+    }
+}
